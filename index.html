@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Old Orchard Tech</title>
+  <meta name="description" content="Macintosh and vintage computer repair services">
+  <meta name="theme-color" content="#427F2D">
+  <meta name="color-scheme" content="light only">
+  <link rel="canonical" href="https://oldorchard.tech">
+
+  <meta property="og:site_name" content="Old Orchard Tech">
+  <meta property="og:title" content="Old Orchard Tech">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Macintosh and vintage computer repair services">
+  <meta property="og:url" content="https://oldorchard.tech">
+  <meta property="og:image" content="https://oldorchard.tech/assets/images/share.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="698">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&family=Inter:wght@400&display=swap">
+
+  <style>
+    :root {
+      --green: #417F2D;
+      --green-dark: #214017;
+      --card-bg: #FFFFFF;
+      --text: #000000;
+      --font-heading: 'Chivo', system-ui, sans-serif;
+      --font-body: 'Chivo', system-ui, sans-serif;
+      --font-button: 'Inter', system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background-color: var(--green);
+      background-image:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0) 60%);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 35rem;
+      background: var(--card-bg);
+      padding: clamp(1.75rem, 5vw, 3rem);
+      box-shadow: 0 1em 3em rgba(0, 0, 0, 0.35);
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      width: 7.5rem;
+      height: 7.5rem;
+      margin: 0 auto 1.25rem;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: clamp(2rem, 6vw, 2.875rem);
+      line-height: 1.25;
+      letter-spacing: -0.025rem;
+      margin: 0 0 0.5rem;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.375;
+      letter-spacing: -0.025rem;
+      margin: 0 0 1rem;
+    }
+
+    p {
+      margin: 0 0 1.25rem;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: underline;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--green-dark);
+    }
+
+    .byline {
+      margin-bottom: 1.25rem;
+    }
+
+    .services {
+      list-style: none;
+      margin: 0 0 1.5rem;
+      padding: 0;
+    }
+
+    .services li {
+      margin: 0.1rem 0;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      height: 3.125rem;
+      padding: 0 1.5625rem;
+      font-family: var(--font-button);
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      background: var(--card-bg);
+      border: 2px solid var(--text);
+      border-radius: 0;
+      box-shadow: 0.177rem 0.177rem 0 0 var(--text);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      color: var(--text);
+      transform: translate(-1px, -1px);
+      box-shadow: calc(0.177rem + 1px) calc(0.177rem + 1px) 0 0 var(--text);
+    }
+
+    .button:active {
+      transform: translate(0.177rem, 0.177rem);
+      box-shadow: none;
+    }
+
+    .button svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      fill: currentColor;
+      flex: none;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid rgba(144, 144, 144, 0.25);
+      margin: 2rem 0;
+    }
+
+    .gallery {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .gallery li {
+      margin: 0;
+    }
+
+    .gallery figure {
+      margin: 0;
+    }
+
+    .gallery a {
+      display: block;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .gallery figcaption {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin-top: 0.4rem;
+      text-align: left;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      margin: 2rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      color: var(--text);
+    }
+
+    .social svg {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: currentColor;
+    }
+
+    .social a:hover,
+    .social a:focus-visible {
+      color: var(--green);
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .social {
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Icon definitions (copied from the original site) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="icon-cart" viewBox="0 0 40 40">
+      <path
+        d="M13,32.1c-0.5-0.5-1.1-0.7-1.9-0.7s-1.4,0.2-1.9,0.7c-0.5,0.5-0.7,1.1-0.7,1.9c0,0.7,0.2,1.4,0.7,1.9 c0.5,0.5,1.1,0.7,1.9,0.7s1.4-0.2,1.9-0.7c0.5-0.5,0.7-1.1,0.7-1.9S13.5,32.6,13,32.1z M31.2,32.1c-0.5-0.5-1-0.7-1.8-0.7 s-1.4,0.2-1.9,0.7c-0.5,0.5-0.7,1.1-0.7,1.9c0,0.7,0.2,1.4,0.7,1.9s1.1,0.7,1.9,0.7s1.4-0.2,1.9-0.7c0.5-0.5,0.7-1.1,0.7-1.9 S31.7,32.6,31.2,32.1z M34.2,9.8c-0.2-0.2-0.5-0.4-0.9-0.4H8.9c0-0.1,0-0.3-0.1-0.5c0-0.3-0.1-0.5-0.1-0.6c0-0.1-0.1-0.3-0.2-0.5 c0-0.2-0.1-0.4-0.2-0.5C8.1,7.1,8,7,7.8,6.9C7.6,6.8,7.4,6.8,7.2,6.8H2c-0.3,0-0.6,0.1-0.9,0.4C0.7,7.6,0.7,7.8,0.7,8.1 c0,0.3,0.1,0.6,0.4,0.9s0.5,0.4,0.9,0.4h4.2l3.5,17.8c0,0.1-0.1,0.3-0.3,0.6c-0.2,0.3-0.3,0.6-0.4,0.8c-0.1,0.2-0.2,0.4-0.3,0.7 c-0.1,0.3-0.2,0.5-0.2,0.6c0,0.3,0.1,0.6,0.4,0.9c0.2,0.2,0.5,0.4,0.9,0.4h20.9c0.3,0,0.6-0.1,0.9-0.4c0.2-0.2,0.4-0.5,0.4-0.9 c0-0.4-0.1-0.6-0.4-0.9c-0.2-0.2-0.5-0.4-0.9-0.4H12.1c0.3-0.6,0.5-1,0.5-1.4c0-0.1-0.1-0.6-0.3-1.5l21.3-2.5c0.3,0,0.6-0.2,0.8-0.4 c0.2-0.2,0.3-0.5,0.3-0.8V10.7C34.7,10.4,34.5,10.1,34.2,9.8z" />
+    </symbol>
+    <symbol id="icon-email" viewBox="0 0 40 40">
+      <path
+        d="M37.5,12.6l-17.5,11.9L2.5,12.6c-.2-.1-.3-.2-.5-.2v-2.7c0-.8.6-1.4,1.4-1.4h33.1c.8,0,1.4.6,1.4,1.4v2.7c-.2,0-.4,0-.5.2ZM19.5,26.3c.2.1.3.2.5.2s.4,0,.5-.2l17.5-11.9v16.9c0,.8-.6,1.4-1.4,1.4H3.4c-.8,0-1.4-.6-1.4-1.4V14.4l17.5,11.9Z" />
+    </symbol>
+    <symbol id="icon-mastodon" viewBox="0 0 40 40">
+      <path
+        d="M20.4,2.7c-4.7,0-9.1,0.5-11.8,1.7c0,0-5.2,2.3-5.2,10.2c0,1.8,0,4,0,6.3c0.2,7.7,1.4,15.4,8.6,17.3 c3.3,0.9,6.1,1.1,8.4,0.9c4.1-0.2,6.5-1.5,6.5-1.5l-0.1-3c0,0-3,0.9-6.3,0.8c-3.3-0.1-6.8-0.4-7.3-4.4c0-0.4-0.1-0.7-0.1-1.1 c0,0,3.2,0.8,7.3,1c2.5,0.1,4.8-0.1,7.2-0.4c4.6-0.5,8.5-3.4,9-5.9c0.8-4.1,0.7-9.9,0.7-9.9c0-7.9-5.2-10.2-5.2-10.2 c-2.6-1.2-7.1-1.7-11.8-1.7H20.4z M15.2,8.9c1.9,0,3.4,0.7,4.4,2.2l0.9,1.6l0.9-1.6c1-1.5,2.4-2.2,4.4-2.2c1.7,0,3,0.6,4.1,1.7 c1,1.2,1.5,2.7,1.5,4.7v9.6h-3.8v-9.3c0-2-0.8-3-2.5-3c-1.8,0-2.7,1.2-2.7,3.5v5.1h-3.8v-5.1c0-2.3-0.9-3.5-2.7-3.5 c-1.6,0-2.5,1-2.5,3v9.3H9.6v-9.6c0-2,0.5-3.5,1.5-4.7C12.1,9.5,13.5,8.9,15.2,8.9z" />
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 40 40">
+      <path
+        d="M36,20.3c0,3.5-1,6.6-3.1,9.4c-2,2.8-4.7,4.7-7.9,5.8c-0.4,0.1-0.6,0-0.8-0.1c-0.2-0.2-0.3-0.4-0.3-0.6v-4.4 c0-1.3-0.4-2.3-1.1-3c0.8-0.1,1.5-0.2,2.1-0.4c0.6-0.2,1.3-0.4,2-0.8c0.7-0.4,1.2-0.8,1.7-1.4c0.5-0.5,0.8-1.3,1.1-2.2 s0.4-2,0.4-3.1c0-1.7-0.5-3.1-1.6-4.3c0.5-1.3,0.5-2.7-0.2-4.2c-0.4-0.1-1,0-1.7,0.2c-0.7,0.3-1.4,0.6-1.9,0.9L24,12.5 c-1.3-0.4-2.6-0.5-4-0.5s-2.7,0.2-4,0.5c-0.2-0.2-0.5-0.3-0.9-0.6c-0.4-0.2-0.9-0.5-1.7-0.8c-0.8-0.3-1.4-0.4-1.8-0.3 c-0.6,1.6-0.7,3-0.1,4.2c-1.1,1.2-1.6,2.6-1.6,4.3c0,1.2,0.1,2.2,0.4,3.1s0.6,1.6,1.1,2.2s1,1,1.7,1.4c0.7,0.4,1.3,0.6,2,0.8 c0.6,0.2,1.3,0.3,2.1,0.4c-0.6,0.5-0.9,1.2-1,2.1c-0.3,0.1-0.6,0.2-0.9,0.3c-0.3,0.1-0.7,0.1-1.2,0.1c-0.5,0-0.9-0.1-1.4-0.4 c-0.5-0.3-0.8-0.7-1.2-1.3c-0.3-0.4-0.6-0.8-1-1.1c-0.4-0.3-0.8-0.4-1-0.5L9,26.5c-0.3,0-0.5,0-0.6,0.1c-0.1,0.1-0.1,0.1-0.1,0.2 c0,0.1,0.1,0.2,0.2,0.3c0.1,0.1,0.2,0.2,0.3,0.2l0.1,0.1c0.3,0.1,0.6,0.4,0.9,0.8s0.5,0.7,0.7,1.1l0.2,0.5c0.2,0.5,0.5,1,0.9,1.3 c0.4,0.3,0.9,0.5,1.4,0.6c0.5,0.1,1,0.1,1.4,0.1c0.5,0,0.9,0,1.2-0.1l0.5-0.1c0,0.5,0,1.1,0,1.9c0,0.7,0,1.1,0,1.1 c0,0.2-0.1,0.5-0.3,0.6c-0.2,0.2-0.5,0.2-0.8,0.1c-3.2-1.1-5.8-3-7.9-5.8S4,23.8,4,20.3c0-2.9,0.7-5.6,2.1-8S9.5,7.8,12,6.4 s5.1-2.1,8-2.1s5.6,0.7,8,2.1s4.4,3.4,5.8,5.8S36,17.4,36,20.3L36,20.3z" />
+    </symbol>
+    <symbol id="icon-printables" viewBox="0 0 40 40">
+      <path d="M7,39.8l13-7.5L7,24.8V39.8z M33,9.7v15l-13,7.5v-15L7,9.7l13-7.5L33,9.7z" />
+    </symbol>
+    <symbol id="icon-youtube" viewBox="0 0 40 40">
+      <path
+        d="M37.6,27.1c0,0-0.3,2.4-1.4,3.5c-1.4,1.4-2.9,1.4-3.6,1.5c-5,0.4-12.4,0.4-12.4,0.4s-9.2-0.1-12.1-0.4 c-0.8-0.1-2.6-0.1-3.9-1.5c-1.1-1.1-1.4-3.5-1.4-3.5s-0.4-2.9-0.4-5.7v-2.7c0-2.9,0.4-5.7,0.4-5.7s0.3-2.4,1.4-3.5 C5.5,8,7,8,7.7,7.9c5-0.4,12.4-0.4,12.4-0.4h0c0,0,7.5,0,12.4,0.4C33.3,8,34.8,8,36.2,9.4c1.1,1.1,1.4,3.5,1.4,3.5s0.4,2.9,0.4,5.7 v2.7C37.9,24.2,37.6,27.1,37.6,27.1z M16.5,14.6l0,9.9l9.6-5L16.5,14.6z" />
+    </symbol>
+  </svg>
+
+  <main class="card">
+    <img class="logo" src="assets/images/logo.png" width="510" height="510" alt="Old Orchard Tech logo">
+
+    <h1>Old Orchard Tech</h1>
+    <h2>Vintage Macintosh Repair</h2>
+
+    <p class="byline">
+      By <a href="https://schrockwell.com">Rockwell Schrock</a> &ndash;
+      <a href="mailto:rockwell@schrock.me">rockwell@schrock.me</a>
+    </p>
+
+    <ul class="services">
+      <li>Floppy drive repair</li>
+      <li>Power supply recaps</li>
+      <li>SE/30 Reloaded boards</li>
+    </ul>
+
+    <a class="button" href="https://www.ebay.com/usr/old-orchard-tech">
+      <svg aria-hidden="true">
+        <use href="#icon-cart" />
+      </svg>
+      Shop Products on eBay
+    </a>
+
+    <div style="margin: 1em;">
+      <a href=" mailto:rockwell@schrock.me">
+        Email for inquiries
+      </a>
+    </div>
+
+    <hr>
+
+    <section aria-labelledby="recent-work">
+      <h2 id="recent-work">Recent Work</h2>
+      <ul class="gallery">
+        <li>
+          <figure>
+            <a href="assets/images/gallery/se30-reloaded-full.jpg">
+              <img src="assets/images/gallery/se30-reloaded.jpg" width="675" height="900" alt="SE/30 Reloaded board"
+                loading="lazy">
+            </a>
+            <figcaption>SE/30 Reloaded board</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="assets/images/gallery/psu-recap-full.jpg">
+              <img src="assets/images/gallery/psu-recap.jpg" width="1200" height="900" alt="Power supply being recapped"
+                loading="lazy">
+            </a>
+            <figcaption>Power supply being recapped</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="assets/images/gallery/800k-floppies-full.jpg">
+              <img src="assets/images/gallery/800k-floppies.jpg" width="1200" height="900"
+                alt="800K floppies lined up for repair" loading="lazy">
+            </a>
+            <figcaption>800K floppies lined up for repair</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="assets/images/gallery/800k-drive-full.jpg">
+              <img src="assets/images/gallery/800k-drive.jpg" width="1200" height="900"
+                alt="800K drive refurbished to working condition" loading="lazy">
+            </a>
+            <figcaption>800K drive refurbished to working condition</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="assets/images/gallery/mac-plus-400k-full.jpg">
+              <img src="assets/images/gallery/mac-plus-400k.jpg" width="1200" height="900"
+                alt="Mac Plus and 400K drive fully refurbished" loading="lazy">
+            </a>
+            <figcaption>Mac Plus and 400K drive fully refurbished</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <nav aria-label="Contact and social links">
+      <ul class="social">
+        <li><a href="mailto:rockwell@schrock.me"><svg aria-hidden="true">
+              <use href="#icon-email" />
+            </svg><span class="visually-hidden">Email</span></a></li>
+        <li><a href="https://mastodon.social/@schrockwell" rel="me"><svg aria-hidden="true">
+              <use href="#icon-mastodon" />
+            </svg><span class="visually-hidden">Mastodon</span></a></li>
+        <li><a href="https://github.com/schrockwell"><svg aria-hidden="true">
+              <use href="#icon-github" />
+            </svg><span class="visually-hidden">GitHub</span></a></li>
+        <li><a href="https://www.printables.com/@Schrockwell"><svg aria-hidden="true">
+              <use href="#icon-printables" />
+            </svg><span class="visually-hidden">Printables</span></a></li>
+        <li><a href="https://www.youtube.com/schrockwell"><svg aria-hidden="true">
+              <use href="#icon-youtube" />
+            </svg><span class="visually-hidden">YouTube</span></a></li>
+      </ul>
+    </nav>
+  </main>
+
+</body>
+
+</html>
